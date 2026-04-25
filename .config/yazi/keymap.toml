@@ -1,0 +1,5 @@
+[mgr]
+prepend_keymap = [
+{on=["m", "o"], run="shell 'mpv . --loop-playlist=inf' --orphan", desc="play (Ordered)"},
+{on=["m", "s"], run="shell 'mpv . --shuffle --loop-playlist=inf' --orphan", desc="play (Shuffled)"}
+]

@@ -1,0 +1,99 @@
+@import "~/.cache/wal/colors.rasi"
+
+* {
+    bg:       @background;
+    bg-alt:   @color0;
+    fg:       @foreground;
+    fg-dim:   @color7;
+    accent:   @color2;
+    sel:      @color8;
+
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "JetBrains Mono 10";
+    border-color:     @accent;
+    spacing:          0;
+    padding:          0;
+    margin:           0;
+}
+
+window {
+    background-color: @bg;
+    border:           2px solid;
+    border-color:     @accent;
+    border-radius:    12px;
+    padding:          14px;
+    width:            85%;
+    height:           320px;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  10px;
+    padding:  0;
+}
+
+inputbar {
+    children:         [ prompt, entry ];
+    background-color: @bg-alt;
+    border-radius:    8px;
+    padding:          6px 12px;
+    spacing:          8px;
+}
+
+prompt {
+    text-color:     @accent;
+    vertical-align: 0.5;
+}
+
+entry {
+    text-color:        @fg;
+    placeholder:       "Search wallpapers...";
+    placeholder-color: @fg-dim;
+    vertical-align:    0.5;
+    cursor:            text;
+}
+
+listview {
+    columns:       5;
+    lines:         1;
+    layout:        vertical;
+    flow:          horizontal;
+    spacing:       8px;
+    scrollbar:     false;
+    cycle:         true;
+    dynamic:       true;
+    fixed-columns: true;
+    fixed-height:  true;
+}
+
+element {
+    orientation:      vertical;
+    background-color: @bg-alt;
+    border-radius:    8px;
+    padding:          5px;
+    spacing:          0;
+    cursor:           pointer;
+    border-color:     transparent;
+    children:         [ element-icon ];
+}
+
+element normal.normal {
+    background-color: @bg-alt;
+}
+
+element selected.normal {
+    background-color: @sel;
+    border-color:     @accent;
+    border:           5px solid;
+
+}
+
+element-icon {
+    size:          230px;
+    border-radius: 4px;
+    cursor:        inherit;
+}
+

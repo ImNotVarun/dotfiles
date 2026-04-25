@@ -1,0 +1,160 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 10,
+  "margin-left": 20,
+  "margin-right": 20,
+  "height": 42,
+  "spacing": 4,
+  "modules-left": [
+    "custom/launcher",
+    "niri/workspaces",
+    "network"
+  ],
+  "modules-center": [
+    "mpris",
+    "clock",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "battery",
+    "pulseaudio",
+    "backlight",
+    "tray",
+    "custom/power"
+  ],
+"niri/workspaces": {
+    "on-click": "activate",
+    "format": "{index}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false 
+  },
+  "niri/window": {
+    "format": "{title}"
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "fuzzel --config ~/.config/fuzzel/launcher.ini || pkill fuzzel",
+    "on-click-right": "pkill fuzzel",
+    "tooltip": false
+  },
+  "mpris": {
+"player": ["spotify","spotify-player"],
+    "dynamic-order": ["artist", "title"],
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "status-icons": { "paused": "󰏤 " },
+    "player-icons": { "default": "󰎈 " },
+    "dynamic-len": 35
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10
+  },
+  "clock#simpleclock": {
+    "tooltip": false,
+    "format": " \u00A0  {:%H:%M}"
+  },
+  "clock": {
+    "format": " \u00A0  {:%H:%M}",
+    "calendar": {
+      "format": {
+        "days": "<span weight='normal'>{}</span>",
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1
+    },
+    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
+  },
+  "cpu": {
+    "format": " \u00A0 {usage}%",
+    "tooltip": true,
+    "interval": 60
+  },
+  "memory": {
+    "format": "   {used:0.1f}Gi",
+    "tooltip-format": "RAM: {used:0.1f}Gi / {total:0.1f}Gi\nSwap: {swapUsed:0.1f}Gi / {swapTotal:0.1f}Gi",
+    "interval": 60
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon} \u00A0  {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ],
+      "headphone": ""
+    }
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon}   {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "tooltip": true,
+    "tooltip-format": "Brightness: {percent}%"
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout -p layer-shell &",
+    "format": "⏻"
+  },
+"custom/walls": {
+  "format": "󰋩",
+  "tooltip": "Left: normal | Right: anime",
+  "on-click": "~/.config/scripts/wallpicker.sh",
+  "on-click-right": "~/.local/bin/random-wall.sh anime"
+},
+  "network": {
+    "interface": "wlp3s0",
+    "format-wifi": "󰇚 {bandwidthDownBytes}  󰕒 {bandwidthUpBytes}",
+    "format-ethernet": "󰈀  {bandwidthDownBytes}  󰇚  {bandwidthUpBytes}",
+    "format-disconnected": "󰖪 Disconnected",
+    "format-linked": "󰈁 Linked",
+    "tooltip-format": "{ifname}\nSSID: {essid}\nIP: {ipaddr}/{cidr}\nSignal: {signalStrength}%",
+    "on-click": "kitty -e nmtui",
+    "interval": 2,
+    "max-length": 50
+  },
+"custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.py",
+    "return-type": "json",
+    "tooltip": true
+}
+},

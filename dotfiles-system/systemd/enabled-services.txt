@@ -1,0 +1,16 @@
+UNIT
+getty@.service
+NetworkManager-dispatcher.service
+NetworkManager-wait-online.service
+NetworkManager.service
+preload.service
+systemd-resolved.service
+systemd-timesyncd.service
+tlp.service
+windscribe-helper.service
+systemd-resolved-monitor.socket
+systemd-resolved-varlink.socket
+systemd-userdbd.socket
+remote-fs.target
+
+13

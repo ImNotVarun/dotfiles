@@ -1,0 +1,33 @@
+# Wofi configuration
+# ~/.config/wofi/config
+
+# Display mode - drun shows applications
+mode=drun
+
+# Window dimensions
+width=640
+height=420
+
+# Enable icons
+show=drun
+allow_images=true
+image_size=80
+
+# Search behavior
+allow_markup=true
+insensitive=true
+hide_scroll=true
+
+# Behavior
+no_actions=true
+prompt=Search
+
+# Styling
+stylesheet=/home/varun/.config/wofi/style.css
+layer=overlay
+
+# Number of columns
+columns=2
+
+# GTK dark theme
+gtk_dark=true

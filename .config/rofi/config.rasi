@@ -1,0 +1,6 @@
+configuration {
+       show-icons: true;
+       drun-display-format: "{icon} {name}";
+   }
+
+@theme "/home/varun/.local/share/rofi/themes/spotlight-dark.rasi"

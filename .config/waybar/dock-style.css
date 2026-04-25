@@ -1,0 +1,45 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#custom-firefox,
+#custom-terminal,
+#custom-files,
+#custom-code,
+#custom-music {
+    color: #cdd6f4;
+    background: transparent;
+    padding: 0 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+#custom-firefox:hover,
+#custom-terminal:hover,
+#custom-files:hover,
+#custom-code:hover,
+#custom-music:hover {
+    background: rgba(137, 180, 250, 0.2);
+
+}
+
+#custom-firefox:active,
+#custom-terminal:active,
+#custom-files:active,
+#custom-code:active,
+#custom-music:active {
+    background: rgba(137, 180, 250, 0.3);
+
+}

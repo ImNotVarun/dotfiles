@@ -1,0 +1,20 @@
+[
+  {
+    "context": "Editor",
+    "bindings": [
+      {
+        "command": "task:Run Python File",
+        "keys": ["ctrl+e"]
+      }
+    ]
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": [
+      {
+        "command": "task:Run Python File",
+        "keys": ["ctrl+e"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export XCURSOR_SIZE:27
+SETUVAR --export XCURSOR_THEME:El_Capitan_CursorsMODNew
+SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/home/varun/bin\x1e/home/varun/\x2elocal/bin

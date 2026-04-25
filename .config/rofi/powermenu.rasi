@@ -1,0 +1,115 @@
+/*****----- Power Menu -----*****/
+@import "/home/varun/.cache/wal/colors.rasi"
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    display-drun:                "";
+}
+
+window {
+    location:                    northeast;
+    anchor:                      northwest;
+    x-offset:                    -15;
+    y-offset:                    60;
+    width:                       160px;
+    border:                      1px solid;
+    border-radius:               12px;
+    border-color:                @color4;
+    background-color:            @background;
+    padding:                     0px;
+    margin:                      0px;
+    cursor:                      "default";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     8px;
+    background-color:            transparent;
+    children:                    [listview];
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    spacing:                     4px;
+    cycle:                       true;
+    scrollbar:                   false;
+    background-color:            transparent;
+}
+
+element {
+    enabled:                     true;
+    padding:                     10px 16px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @color4;
+    text-align:                  center;
+    cursor:                      pointer;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @color4;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:            transparent;
+    text-color:                  @color4;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:            transparent;
+    text-color:                  @color4;
+}
+
+element selected.normal,
+element selected.urgent,
+element selected.active {
+    background-color:            @color2;
+    text-color:                  @color7;
+    border:                      1px solid;
+    border-color:                @color6;
+    border-radius:               8px;
+}
+
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    text-align:                  center;
+    expand:                      true;
+    padding:                     0px;
+}
+
+element-icon {
+    background-color:            inherit;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    size:                        0px;
+    border:                      0px;
+}
+
+inputbar {
+    children:                    [];
+    padding:                     0px;
+}
+
+prompt {
+    enabled:                     false;
+    padding:                     0px;
+}
+
+entry {
+    background-color:            inherit;
+    text-color:                  inherit;
+    placeholder-color:           inherit;
+    placeholder:                 "";
+    padding:                     0px;
+    blink:                       false;
+}

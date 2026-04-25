@@ -1,0 +1,21 @@
+# Backups & temp files
+*.bak
+*-backup*
+*-old*
+*backup*
+* copy*
+sed*
+
+# State/cache files
+lastPlaylist.m3u
+userstate.cbor
+gamma_state
+*-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*
+
+# Secrets
+*.key
+*.pem
+*.token
+*secret*
+*password*
+*credentials*

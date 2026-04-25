@@ -1,0 +1,43 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 48,
+    "spacing": 8,
+    "margin-bottom": 10,
+    "margin-left": 400,
+    "margin-right": 400,
+    "modules-left": [],
+    "modules-center": [
+        "custom/firefox",
+        "custom/terminal",
+        "custom/files",
+        "custom/code",
+        "custom/music"
+    ],
+    "modules-right": [],
+    "custom/firefox": {
+        "format": "󰈹",
+        "on-click": "firefox",
+        "tooltip": false
+    },
+    "custom/terminal": {
+        "format": "",
+        "on-click": "alacritty",
+        "tooltip": false
+    },
+    "custom/files": {
+        "format": "",
+        "on-click": "thunar",
+        "tooltip": false
+    },
+    "custom/code": {
+        "format": "󰨞",
+        "on-click": "code",
+        "tooltip": false
+    },
+    "custom/music": {
+        "format": "",
+        "on-click": "spotify",
+        "tooltip": false
+    }
+}

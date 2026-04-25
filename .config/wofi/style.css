@@ -1,0 +1,84 @@
+/* Wofi Spotlight Dark Theme (clean + border selection) */
+
+window {
+    margin: 0px;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #262525;
+    font-family: "Montserrat";
+    font-size: 12px;
+}
+
+/* Search input */
+#input {
+    margin: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #242424;
+    color: #DEDEDE;
+    font-size: 20px;
+    font-family: "Montserrat";
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+/* Containers */
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#inner-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Scroll */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+/* Entry text */
+#text {
+    margin: 0px;
+    padding: 0px;
+    color: #DEDEDE;
+}
+
+#entry {
+    padding: 10px 16px;
+    margin: 4px 8px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: transparent;
+
+    /* layout control */
+    min-height: 5px;
+}
+
+/* ICON = small column */
+#entry image {
+    margin-right: 10px;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+
+/* Selection */
+#entry:selected {
+    background-color: transparent;
+    border: 2px solid #faf5ff;
+}
+
+#entry:selected #text {
+    color: #FFFFFF;
+}

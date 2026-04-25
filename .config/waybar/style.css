@@ -1,0 +1,277 @@
+/* --- PYWAL DYNAMIC COLORS --- */
+@import "../../.cache/wal/colors-waybar.css";
+
+/* --- GLOBAL RESET & BAR SETTINGS --- */
+* {
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 0;
+  min-width: 0;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  /* Full transparency for the bar itself */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar>box {
+  background-color: transparent;
+}
+
+/* --- ISLAND STYLING --- */
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @color0;
+  /* Darkest wallpaper color */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 2px 8px;
+  margin: 5px 5px;
+}
+
+/* --- MODULE DEFAULTS --- */
+#clock,
+#pulseaudio,
+#battery,
+#backlight,
+#uptime,
+#custom-logo,
+#custom-power,
+#custom-spotify,
+#custom-notification,
+#custom-walls,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris,
+#network,
+#custom-gamma {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: alpha(@color8, 0.15);
+  /* Subtle inner-box contrast */
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: transparent;
+  color: @foreground;
+}
+
+#workspaces button:hover {
+  color: @color0;
+  background-color: @color4;
+}
+
+#workspaces button.active {
+  background-color: @color4;
+  color: @color0;
+}
+
+#workspaces button.urgent {
+  background-color: @color1;
+  color: @foreground;
+}
+
+/* --- SPECIAL MODULE OVERRIDES --- */
+#window {
+  background-color: transparent;
+  color: @foreground;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#custom-launcher {
+  font-size: 20px;
+  margin: 0.4rem 0.25rem;
+  margin-left: 10px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  color: @color0;
+  background: @color4;
+  transition: 0.3s;
+}
+
+#custom-launcher:hover {
+  background: @color2;
+  color: @color0;
+}
+
+#custom-power {
+  color: @color1;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+
+/* --- DYNAMIC MODULE COLORS --- */
+#cpu {
+  color: @color2;
+}
+
+#cpu:hover {
+  background-color: @color2;
+  color: @color0;
+}
+
+#memory {
+  color: @color5;
+}
+
+#memory:hover {
+  background-color: @color5;
+  color: @color0;
+}
+
+#battery {
+  color: @color3;
+}
+
+#battery:hover {
+  background-color: @color3;
+  color: @color0;
+}
+
+#uptime {
+  color: @color6;
+}
+
+#uptime:hover {
+  background-color: @color6;
+  color: @color0;
+}
+
+#clock {
+  color: @color4;
+}
+
+#clock:hover {
+  background-color: @color4;
+  color: @color0;
+}
+
+
+#mpris.playing {
+  color: @color5;
+}
+
+#mpris.paused {
+  color: @color8;
+}
+
+#mpris:hover {
+  background-color: @color5;
+  color: @color0;
+}
+
+#pulseaudio {
+  color: @color5;
+}
+
+#pulseaudio.muted {
+  color: @color8;
+}
+
+#pulseaudio:hover {
+  background-color: @color5;
+  color: @color0;
+}
+
+#custom-logo {
+  color: @color4;
+}
+
+#custom-logo:hover {
+  background-color: @color4;
+  color: @color0;
+}
+
+#backlight {
+  color: @color7;
+}
+
+#backlight:hover {
+  background-color: @color7;
+  color: @color0;
+}
+
+#custom-power:hover {
+  background-color: @color1;
+  color: @color0;
+}
+
+#custom-walls {
+  color: @color3;
+  font-size: 18px;
+  min-width: 26px;
+}
+
+#custom-walls:hover {
+  background-color: @color3;
+  color: @color0;
+  transition: 0.2s ease;
+}
+
+#custom-gamma {
+  color: @color2;
+  font-size: 18px;
+  min-width: 26px;
+}
+
+#custom-gamma:hover {
+  background-color: @color2;
+  color: @color0;
+}
+
+#network {
+  color: @color4;
+}
+
+#network:hover {
+  background-color: @color4;
+  color: @color0;
+}
+
+#network.disconnected {
+  color: @color1;
+}
+
+
+/* --- TOOLTIP --- */
+tooltip {
+  background-color: @color0;
+  border: 2px solid @color4;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+#custom-sep {
+  padding: 5px;
+  color: @color8;
+}
+
+#custom-weather {
+  color: @color6;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: alpha(@color8, 0.15);
+}
+
+#custom-weather:hover {
+  background-color: @color6;
+  color: @color0;
+}
